@@ -1,0 +1,65 @@
+import time
+import os
+import math
+def Printing(s):
+    for i in s:
+        print(i,end="")
+        time.sleep(0.03)
+def Calculation(oper):
+    if oper == 1:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\nSum of {a} and {b} : {a+b}")
+    elif oper == 2:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\nSubstraction of {a} and {b} : {a-b}")
+    elif oper == 3:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\nMultiply of {a} and {b} : {a*b}")
+    elif oper == 4:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\nDivision of {a} and {b} : {a/b}")
+    elif oper == 5:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\n{b} Percentage of {a} : {(a*b)/100}") 
+    elif oper == 6:
+        a = eval(input("Enter the first data....  : "))
+        b = eval(input("Enter the second data...  : "))
+        Printing(f"\n{b} Exponential of {a} : {a**b}")
+    elif oper == 7:
+        a = eval(input("Enter the  data....  : "))
+        Printing(f"\nPower Of {a} is : {a**2}")
+    elif oper == 8:
+        a = eval(input("Enter the  data....  : "))
+        Printing(f"\nSquare Root Of {a} is : {math.sqrt(a)}")
+    else:
+        Printing("Invalid choice")
+
+
+os.system('cls')
+t=1
+while t:
+    print("...............WELCOME..............")
+    print()
+    print("1) Addition                 2) Substraction")
+    print("3) Multiply                 4) Divide      ")
+    print("5) Percentage               6) Exponential ")
+    print("7) Square                   8) Square Root \n")
+    ch = int(input("Enter Your Operation choice .... : "))
+    print("\n")
+    Printing("You have to give data at which we can perform an operation....\n\n")
+    print()
+    Calculation(ch)
+    Printing("\n\n You want to continue............. \n 1) Yes\n 2) No\n")
+    k = int(input())
+    if k==1:
+        os.system('cls')
+    else:
+        print("          ..........THANK YOU!..........     ")
+        t=0
+
+
